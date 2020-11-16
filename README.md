@@ -1,4 +1,6 @@
-# WAAVI Sanitizer
+# 5150 Studios Sanitizer
+
+Forked from WAAVI Sanitizer, but now supports Laravel 8!
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/waavi/sanitizer.svg?style=flat-square)](https://packagist.org/packages/waavi/sanitizer)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
