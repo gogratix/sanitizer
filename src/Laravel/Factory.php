@@ -1,11 +1,11 @@
 <?php
 
-namespace 5150studios\Sanitizer\Laravel;
+namespace Seivad\Sanitizer\Laravel;
 
 use Closure;
 use InvalidArgumentException;
-use 5150studios\Sanitizer\Contracts\Filter;
-use 5150studios\Sanitizer\Sanitizer;
+use Seivad\Sanitizer\Sanitizer;
+use Seivad\Sanitizer\Contracts\Filter;
 
 class Factory
 {
@@ -35,6 +35,7 @@ class Factory
     public function make(array $data, array $rules)
     {
         $sanitizer = new Sanitizer($data, $rules, $this->customFilters);
+
         return $sanitizer;
     }
 
@@ -53,7 +54,7 @@ class Factory
         }
 
         if (!($customFilter instanceof Closure) && !in_array(Filter::class, class_implements($customFilter))) {
-            throw new InvalidArgumentException('Custom filter must be a Closure or a class implementing the 5150studios\Sanitizer\Contracts\Filter interface.');
+            throw new InvalidArgumentException('Custom filter must be a Closure or a class implementing the Seivad\Sanitizer\Contracts\Filter interface.');
         }
 
         $this->customFilters[$name] = $customFilter;

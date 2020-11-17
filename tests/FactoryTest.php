@@ -1,21 +1,27 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use 5150studios\Sanitizer\Laravel\Factory;
-use 5150studios\Sanitizer\Sanitizer;
+use Seivad\Sanitizer\Sanitizer;
+use Seivad\Sanitizer\Laravel\Factory;
 
 class FactoryTest extends TestCase
 {
+    /**
+     * @param $data
+     * @param $rules
+     * @return mixed
+     */
     public function sanitize($data, $rules)
     {
         $sanitizer = new Sanitizer($data, $rules, [
-            'capitalize'  => \5150studios\Sanitizer\Filters\Capitalize::class,
-            'escape'      => \5150studios\Sanitizer\Filters\EscapeHTML::class,
-            'format_date' => \5150studios\Sanitizer\Filters\FormatDate::class,
-            'lowercase'   => \5150studios\Sanitizer\Filters\Lowercase::class,
-            'uppercase'   => \5150studios\Sanitizer\Filters\Uppercase::class,
-            'trim'        => \5150studios\Sanitizer\Filters\Trim::class,
+            'capitalize' => \Seivad\Sanitizer\Filters\Capitalize::class,
+            'escape' => \Seivad\Sanitizer\Filters\EscapeHTML::class,
+            'format_date' => \Seivad\Sanitizer\Filters\FormatDate::class,
+            'lowercase' => \Seivad\Sanitizer\Filters\Lowercase::class,
+            'uppercase' => \Seivad\Sanitizer\Filters\Uppercase::class,
+            'trim' => \Seivad\Sanitizer\Filters\Trim::class,
         ]);
+
         return $sanitizer->sanitize();
     }
 

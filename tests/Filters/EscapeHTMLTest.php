@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use 5150studios\Sanitizer\Sanitizer;
+use Seivad\Sanitizer\Sanitizer;
 
 class EscapeHTMLTest extends TestCase
 {
@@ -13,6 +13,7 @@ class EscapeHTMLTest extends TestCase
     public function sanitize($data, $rules)
     {
         $sanitizer = new Sanitizer($data, $rules);
+
         return $sanitizer->sanitize();
     }
 

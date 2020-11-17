@@ -1,9 +1,9 @@
 <?php
 
-namespace 5150studios\Sanitizer\Filters;
+namespace Seivad\Sanitizer\Filters;
 
 use Illuminate\Support\Collection;
-use 5150studios\Sanitizer\Contracts\Filter;
+use Seivad\Sanitizer\Contracts\Filter;
 
 class Cast implements Filter
 {
@@ -35,6 +35,7 @@ class Cast implements Filter
                 return json_decode($value, true);
             case 'collection':
                 $array = is_array($value) ? $value : json_decode($value, true);
+
                 return new Collection($array);
             default:
                 throw new \InvalidArgumentException("Wrong Sanitizer casting format: {$type}.");

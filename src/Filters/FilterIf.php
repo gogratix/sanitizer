@@ -1,8 +1,8 @@
 <?php
 
-namespace 5150studios\Sanitizer\Filters;
+namespace Seivad\Sanitizer\Filters;
 
-use 5150studios\Sanitizer\Contracts\Filter;
+use Seivad\Sanitizer\Contracts\Filter;
 
 class FilterIf implements Filter
 {

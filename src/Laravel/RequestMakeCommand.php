@@ -1,6 +1,6 @@
 <?php
 
-namespace 5150studios\Sanitizer\Laravel;
+namespace Seivad\Sanitizer\Laravel;
 
 use Illuminate\Console\GeneratorCommand;
 
@@ -34,7 +34,7 @@ class RequestMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__ . '/stubs/request.stub';
+        return __DIR__.'/stubs/request.stub';
     }
 
     /**
@@ -45,6 +45,6 @@ class RequestMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace . '\Http\Requests';
+        return $rootNamespace.'\Http\Requests';
     }
 }

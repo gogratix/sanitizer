@@ -1,10 +1,10 @@
 <?php
 
-namespace 5150studios\Sanitizer\Filters;
+namespace Seivad\Sanitizer\Filters;
 
 use Carbon\Carbon;
 use InvalidArgumentException;
-use 5150studios\Sanitizer\Contracts\Filter;
+use Seivad\Sanitizer\Contracts\Filter;
 
 class FormatDate implements Filter
 {
@@ -23,7 +23,8 @@ class FormatDate implements Filter
             throw new InvalidArgumentException('The Sanitizer Format Date filter requires both the current date format as well as the target format.');
         }
         $currentFormat = trim($options[0]);
-        $targetFormat  = trim($options[1]);
+        $targetFormat = trim($options[1]);
+
         return Carbon::createFromFormat($currentFormat, $value)->format($targetFormat);
     }
 }

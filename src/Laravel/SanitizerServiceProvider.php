@@ -1,6 +1,6 @@
 <?php
 
-namespace 5150studios\Sanitizer\Laravel;
+namespace Seivad\Sanitizer\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 

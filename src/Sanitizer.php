@@ -1,12 +1,12 @@
 <?php
 
-namespace 5150studios\Sanitizer;
+namespace Seivad\Sanitizer;
 
 use Closure;
 use Illuminate\Support\Arr;
+use InvalidArgumentException;
 use Illuminate\Validation\ValidationRuleParser;
 use Illuminate\Validation\ClosureValidationRule;
-use InvalidArgumentException;
 
 class Sanitizer
 {
@@ -27,16 +27,16 @@ class Sanitizer
      *  @var array
      */
     protected $filters = [
-        'capitalize'  => \5150studios\Sanitizer\Filters\Capitalize::class,
-        'cast'        => \5150studios\Sanitizer\Filters\Cast::class,
-        'escape'      => \5150studios\Sanitizer\Filters\EscapeHTML::class,
-        'format_date' => \5150studios\Sanitizer\Filters\FormatDate::class,
-        'lowercase'   => \5150studios\Sanitizer\Filters\Lowercase::class,
-        'uppercase'   => \5150studios\Sanitizer\Filters\Uppercase::class,
-        'trim'        => \5150studios\Sanitizer\Filters\Trim::class,
-        'strip_tags'  => \5150studios\Sanitizer\Filters\StripTags::class,
-        'digit'       => \5150studios\Sanitizer\Filters\Digit::class,
-        'filter_if'   => \5150studios\Sanitizer\Filters\FilterIf::class,
+        'capitalize' => \Seivad\Sanitizer\Filters\Capitalize::class,
+        'cast' => \Seivad\Sanitizer\Filters\Cast::class,
+        'escape' => \Seivad\Sanitizer\Filters\EscapeHTML::class,
+        'format_date' => \Seivad\Sanitizer\Filters\FormatDate::class,
+        'lowercase' => \Seivad\Sanitizer\Filters\Lowercase::class,
+        'uppercase' => \Seivad\Sanitizer\Filters\Uppercase::class,
+        'trim' => \Seivad\Sanitizer\Filters\Trim::class,
+        'strip_tags' => \Seivad\Sanitizer\Filters\StripTags::class,
+        'digit' => \Seivad\Sanitizer\Filters\Digit::class,
+        'filter_if' => \Seivad\Sanitizer\Filters\FilterIf::class,
     ];
 
     /**
@@ -49,8 +49,8 @@ class Sanitizer
      */
     public function __construct(array $data, array $rules, array $customFilters = [])
     {
-        $this->data    = $data;
-        $this->rules   = $this->parseRules($rules);
+        $this->data = $data;
+        $this->rules = $this->parseRules($rules);
         $this->filters = array_merge($this->filters, $customFilters);
     }
 
@@ -91,7 +91,7 @@ class Sanitizer
         } elseif ($rule instanceof ClosureValidationRule) {
             return $rule->callback;
         } else {
-            throw new InvalidArgumentException("Unsupported rule type.");
+            throw new InvalidArgumentException('Unsupported rule type.');
         }
     }
 
@@ -105,14 +105,15 @@ class Sanitizer
     {
         if (strpos($rule, ':') !== false) {
             list($name, $options) = explode(':', $rule, 2);
-            $options              = array_map('trim', explode(',', $options));
+            $options = array_map('trim', explode(',', $options));
         } else {
-            $name    = $rule;
+            $name = $rule;
             $options = [];
         }
         if (!$name) {
             return [];
         }
+
         return compact('name', 'options');
     }
 
@@ -128,7 +129,7 @@ class Sanitizer
             return call_user_func($rule, $value);
         }
 
-        $name    = $rule['name'];
+        $name = $rule['name'];
         $options = $rule['options'];
 
         // If the filter does not exist, throw an Exception:
