@@ -1,5 +1,5 @@
 {
-    "name": "5150studios/sanitizer",
+    "name": "seivad/sanitizer",
     "description": "Data sanitizer for form requests supporting Laravel 8.",
     "keywords": ["laravel", "laravel 8", "sanitation", "input sanitation", "input sanitizer", "input", "transform input", "input filter"],
     "license": "MIT",
