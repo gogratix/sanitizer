@@ -1,6 +1,6 @@
 <?php
 
-namespace Seivad\Sanitizer\Laravel;
+namespace seivad\sanitizer\Laravel;
 
 trait SanitizesInput
 {

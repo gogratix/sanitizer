@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Seivad\Sanitizer\Sanitizer;
-use Seivad\Sanitizer\Laravel\Factory;
+use seivad\sanitizer\Sanitizer;
+use seivad\sanitizer\Laravel\Factory;
 
 class FactoryTest extends TestCase
 {

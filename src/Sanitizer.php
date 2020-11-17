@@ -1,6 +1,6 @@
 <?php
 
-namespace Seivad\Sanitizer;
+namespace seivad\sanitizer;
 
 use Closure;
 use Illuminate\Support\Arr;

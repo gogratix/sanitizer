@@ -1,8 +1,8 @@
 <?php
 
-namespace Seivad\Sanitizer\Filters;
+namespace seivad\sanitizer\Filters;
 
-use Seivad\Sanitizer\Contracts\Filter;
+use seivad\sanitizer\Contracts\Filter;
 
 class Lowercase implements Filter
 {

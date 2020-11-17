@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Seivad\Sanitizer\Sanitizer;
+use seivad\sanitizer\Sanitizer;
 
 class EscapeHTMLTest extends TestCase
 {

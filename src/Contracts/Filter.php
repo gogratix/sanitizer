@@ -1,6 +1,6 @@
 <?php
 
-namespace Seivad\Sanitizer\Contracts;
+namespace seivad\sanitizer\Contracts;
 
 interface Filter
 {

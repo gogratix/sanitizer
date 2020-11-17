@@ -1,10 +1,10 @@
 <?php
 
-namespace Seivad\Sanitizer\Filters;
+namespace seivad\sanitizer\Filters;
 
 use Carbon\Carbon;
 use InvalidArgumentException;
-use Seivad\Sanitizer\Contracts\Filter;
+use seivad\sanitizer\Contracts\Filter;
 
 class FormatDate implements Filter
 {

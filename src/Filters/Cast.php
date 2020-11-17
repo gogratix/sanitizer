@@ -1,9 +1,9 @@
 <?php
 
-namespace Seivad\Sanitizer\Filters;
+namespace seivad\sanitizer\Filters;
 
 use Illuminate\Support\Collection;
-use Seivad\Sanitizer\Contracts\Filter;
+use seivad\sanitizer\Contracts\Filter;
 
 class Cast implements Filter
 {

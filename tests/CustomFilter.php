@@ -1,6 +1,6 @@
 <?php
 
-use Seivad\Sanitizer\Contracts\Filter;
+use seivad\sanitizer\Contracts\Filter;
 
 class CustomFilter implements Filter
 {

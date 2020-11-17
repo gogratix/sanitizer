@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Seivad\\Sanitizer\\": "src/"
+            "seivad\\sanitizer\\": "src/"
         }
     },
     "autoload-dev": {
@@ -32,10 +32,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Seivad\\Sanitizer\\Laravel\\SanitizerServiceProvider"
+                "seivad\\sanitizer\\Laravel\\SanitizerServiceProvider"
             ],
             "aliases": {
-                "Sanitizer": "Seivad\\Sanitizer\\Laravel\\Facade"
+                "Sanitizer": "seivad\\sanitizer\\Laravel\\Facade"
             }
         }
     },

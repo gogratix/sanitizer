@@ -1,6 +1,6 @@
 <?php
 
-namespace Seivad\Sanitizer\Laravel;
+namespace seivad\sanitizer\Laravel;
 
 use Illuminate\Foundation\Http\FormRequest as LaravelFormRequest;
 
