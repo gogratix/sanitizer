@@ -1,9 +1,9 @@
 <?php
 
-namespace Waavi\Sanitizer\Filters;
+namespace 5150studios\Sanitizer\Filters;
 
 use Illuminate\Support\Collection;
-use Waavi\Sanitizer\Contracts\Filter;
+use 5150studios\Sanitizer\Contracts\Filter;
 
 class Cast implements Filter
 {

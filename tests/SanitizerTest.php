@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Waavi\Sanitizer\Sanitizer;
+use 5150studios\Sanitizer\Sanitizer;
 
 class SanitizerTest extends TestCase
 {

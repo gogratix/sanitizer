@@ -1,8 +1,8 @@
 <?php
 
-namespace Waavi\Sanitizer\Filters;
+namespace 5150studios\Sanitizer\Filters;
 
-use Waavi\Sanitizer\Contracts\Filter;
+use 5150studios\Sanitizer\Contracts\Filter;
 
 class Uppercase implements Filter
 {

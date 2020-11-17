@@ -1,6 +1,6 @@
 <?php
 
-namespace Waavi\Sanitizer\Contracts;
+namespace 5150studios\Sanitizer\Contracts;
 
 interface Filter
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Waavi\Sanitizer;
+namespace 5150studios\Sanitizer;
 
 use Closure;
 use Illuminate\Support\Arr;
@@ -27,16 +27,16 @@ class Sanitizer
      *  @var array
      */
     protected $filters = [
-        'capitalize'  => \Waavi\Sanitizer\Filters\Capitalize::class,
-        'cast'        => \Waavi\Sanitizer\Filters\Cast::class,
-        'escape'      => \Waavi\Sanitizer\Filters\EscapeHTML::class,
-        'format_date' => \Waavi\Sanitizer\Filters\FormatDate::class,
-        'lowercase'   => \Waavi\Sanitizer\Filters\Lowercase::class,
-        'uppercase'   => \Waavi\Sanitizer\Filters\Uppercase::class,
-        'trim'        => \Waavi\Sanitizer\Filters\Trim::class,
-        'strip_tags'  => \Waavi\Sanitizer\Filters\StripTags::class,
-        'digit'       => \Waavi\Sanitizer\Filters\Digit::class,
-        'filter_if'   => \Waavi\Sanitizer\Filters\FilterIf::class,
+        'capitalize'  => \5150studios\Sanitizer\Filters\Capitalize::class,
+        'cast'        => \5150studios\Sanitizer\Filters\Cast::class,
+        'escape'      => \5150studios\Sanitizer\Filters\EscapeHTML::class,
+        'format_date' => \5150studios\Sanitizer\Filters\FormatDate::class,
+        'lowercase'   => \5150studios\Sanitizer\Filters\Lowercase::class,
+        'uppercase'   => \5150studios\Sanitizer\Filters\Uppercase::class,
+        'trim'        => \5150studios\Sanitizer\Filters\Trim::class,
+        'strip_tags'  => \5150studios\Sanitizer\Filters\StripTags::class,
+        'digit'       => \5150studios\Sanitizer\Filters\Digit::class,
+        'filter_if'   => \5150studios\Sanitizer\Filters\FilterIf::class,
     ];
 
     /**

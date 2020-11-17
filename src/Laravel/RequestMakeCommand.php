@@ -1,6 +1,6 @@
 <?php
 
-namespace Waavi\Sanitizer\Laravel;
+namespace 5150studios\Sanitizer\Laravel;
 
 use Illuminate\Console\GeneratorCommand;
 
