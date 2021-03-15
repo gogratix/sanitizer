@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use seivad\sanitizer\Sanitizer;
+use Waavi\Sanitizer\Sanitizer;
 
 class CastTest extends TestCase
 {

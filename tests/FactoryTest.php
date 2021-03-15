@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use seivad\sanitizer\Sanitizer;
-use seivad\sanitizer\Laravel\Factory;
+use Waavi\Sanitizer\Sanitizer;
+use Waavi\Sanitizer\Laravel\Factory;
 
 class FactoryTest extends TestCase
 {
@@ -14,12 +14,12 @@ class FactoryTest extends TestCase
     public function sanitize($data, $rules)
     {
         $sanitizer = new Sanitizer($data, $rules, [
-            'capitalize' => \Seivad\Sanitizer\Filters\Capitalize::class,
-            'escape' => \Seivad\Sanitizer\Filters\EscapeHTML::class,
-            'format_date' => \Seivad\Sanitizer\Filters\FormatDate::class,
-            'lowercase' => \Seivad\Sanitizer\Filters\Lowercase::class,
-            'uppercase' => \Seivad\Sanitizer\Filters\Uppercase::class,
-            'trim' => \Seivad\Sanitizer\Filters\Trim::class,
+            'capitalize' => \Waavi\Sanitizer\Filters\Capitalize::class,
+            'escape' => \Waavi\Sanitizer\Filters\EscapeHTML::class,
+            'format_date' => \Waavi\Sanitizer\Filters\FormatDate::class,
+            'lowercase' => \Waavi\Sanitizer\Filters\Lowercase::class,
+            'uppercase' => \Waavi\Sanitizer\Filters\Uppercase::class,
+            'trim' => \Waavi\Sanitizer\Filters\Trim::class,
         ]);
 
         return $sanitizer->sanitize();

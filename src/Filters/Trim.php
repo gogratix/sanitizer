@@ -1,8 +1,8 @@
 <?php
 
-namespace seivad\sanitizer\Filters;
+namespace Waavi\Sanitizer\Filters;
 
-use seivad\sanitizer\Contracts\Filter;
+use Waavi\Sanitizer\Contracts\Filter;
 
 class Trim implements Filter
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace seivad\sanitizer\Laravel;
+namespace Waavi\Sanitizer\Laravel;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 
